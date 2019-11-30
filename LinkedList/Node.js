@@ -116,6 +116,23 @@ class NodeLsit{
     size(){
         return this.length;
     }
+    // 实现 逆序
+    listReverse() {
+        let prev = null;
+        let current = this.head;
+        while (current) {
+            let nextNode = current.next; // 保存下一个节点
+            current.next = prev; //改变当前节点的指针
+            prev = current; // 保存当前节点
+            current = nextNode;
+            if (!(current.next)) {
+                current.next = prev;
+                this.head = current;
+                return;
+            }
+        };
+
+    }
     // toString 实现
     toString(){
         let current = this.head;
@@ -133,4 +150,6 @@ data.append('wqeqw');
 data.insert(0,'1321');
 data.insert(4,'898');
 data.indexOf('1321')
+data.toString();
+data.listReverse();
 data.toString();
