@@ -120,18 +120,19 @@ class NodeLsit{
     listReverse() {
         let prev = null;
         let current = this.head;
-        while (current) {
+        while (current.next) {
             let nextNode = current.next; // 保存下一个节点
             current.next = prev; //改变当前节点的指针
             prev = current; // 保存当前节点
             current = nextNode;
-            if (!(current.next)) {
-                current.next = prev;
-                this.head = current;
-                return;
-            }
+            // if (!(current.next)) {
+            //     current.next = prev;
+            //     this.head = current;
+            //     return;
+            // }
         };
-
+        current.next = prev;
+        this.head = current;
     }
     // toString 实现
     toString(){
