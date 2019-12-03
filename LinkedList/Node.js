@@ -125,11 +125,6 @@ class NodeLsit{
             current.next = prev; //改变当前节点的指针
             prev = current; // 保存当前节点
             current = nextNode;
-            // if (!(current.next)) {
-            //     current.next = prev;
-            //     this.head = current;
-            //     return;
-            // }
         };
         current.next = prev;
         this.head = current;
@@ -148,6 +143,11 @@ class NodeLsit{
 const data = new NodeLsit();
 data.append('1');
 data.append('wqeqw');
+data.append('4');
+data.append('5');
+data.append('7');
+data.append('8');
+data.append('9');
 data.insert(0,'1321');
 data.insert(4,'898');
 data.indexOf('1321')
